@@ -1,13 +1,19 @@
+const PAGES = ['index', 'gallery', 'contact'];
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 const CANVAS_WIDTH = canvas.width = 600;
 const CANVAS_HEIGHT = canvas.height = 600;
-
 const playerImage = new Image();
-playerImage.src = 'Images/spritesheet1.png';
+playerImage.src = 'Images/spritesheet.png';
 const spriteWidth = 575;
 const spriteHeight = 540;
-let playerState = 'walkright';
+let playerState = 'idleright';
+
+if (window.location.pathname == '/') {
+    window.location.href = window.location.href + 'index.html';
+}
+
+const movementSpeed = 1;
 
 let gameFrame = 0;
 const staggerFrames = 20;
@@ -34,18 +40,18 @@ animationStates.forEach((state, index) => {
     let frames = {
         loc: [],
     }
-    for (let j = 0; j < state.frames; j++){
+    for (let j = 0; j < state.frames; j++) {
         let positionx = j * spriteWidth;
         let positiony = index * spriteHeight;
-        frames.loc.push({x: positionx, y: positiony});
+        frames.loc.push({ x: positionx, y: positiony });
     }
     spriteAnimations[state.name] = frames;
 });
 console.log(spriteAnimations)
 
-function animate(){
+function animate() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    let position = Math.floor(gameFrame/staggerFrames) % spriteAnimations[playerState].loc.length;
+    let position = Math.floor(gameFrame / staggerFrames) % spriteAnimations[playerState].loc.length;
     let frameX = spriteWidth * position;
     let frameY = spriteAnimations[playerState].loc[position].y;
 
@@ -56,3 +62,51 @@ function animate(){
     requestAnimationFrame(animate); //creates animation loop
 };
 animate();
+
+window.addEventListener('keydown', function (event) {
+    if (event.key == 'a') {
+        playerState = 'walkleft';
+        let currentX = parseFloat(canvas.style.transform.match(/[-+]?\d+/g)[0]);
+        console.log(currentX)
+        if (currentX < 10) {
+            let currentPage = window.location.href.match(/[^\/]+$/)[0];
+            let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
+            if (index > 0) {
+                window.location.href = PAGES[index - 1] + '.html';
+            }
+        }
+        else {
+
+            canvas.style.transform = `translateX(${currentX - 1}vw)`;
+        }
+    }
+});
+
+window.addEventListener('keyup', function (event) {
+    if (event.key == 'a') {
+        playerState = 'idleleft';
+    }
+});
+
+window.addEventListener('keydown', function (event) {
+    if (event.key == 'd') {
+        playerState = 'walkright';
+        let currentX = parseFloat(canvas.style.transform.match(/[-+]?\d+/g)[0]);
+        if (currentX > 90) {
+            let currentPage = window.location.href.match(/[^\/]+$/)[0];
+            let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
+            if (index < PAGES.length - 1) {
+                window.location.href = PAGES[index + 1] + '.html';
+            }
+        }
+        else {
+            canvas.style.transform = `translateX(${currentX + 1}vw)`;
+        }
+    }
+});
+
+window.addEventListener('keyup', function (event) {
+    if (event.key == 'd') {
+        playerState = 'idleright';
+    }
+});

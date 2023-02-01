@@ -1,1 +1,0 @@
-alert("Use WASD to move around.")
