@@ -256,3 +256,14 @@ ul {
 
 
 
+
+
+#canvas1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+}
