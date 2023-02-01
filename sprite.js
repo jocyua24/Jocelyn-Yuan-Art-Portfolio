@@ -9,7 +9,7 @@ const spriteWidth = 575;
 const spriteHeight = 540;
 let playerState = 'idleright';
 
-if (window.location.pathname == '/') {
+if (!window.location.pathname.endsWith(".html")) {
     window.location.href = window.location.href + 'index.html';
 }
 
@@ -47,7 +47,6 @@ animationStates.forEach((state, index) => {
     }
     spriteAnimations[state.name] = frames;
 });
-console.log(spriteAnimations)
 
 function animate() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -67,7 +66,6 @@ window.addEventListener('keydown', function (event) {
     if (event.key == 'a') {
         playerState = 'walkleft';
         let currentX = parseFloat(canvas.style.transform.match(/[-+]?\d+/g)[0]);
-        console.log(currentX)
         if (currentX < 10) {
             let currentPage = window.location.href.match(/[^\/]+$/)[0];
             let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
