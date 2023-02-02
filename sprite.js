@@ -63,7 +63,7 @@ function animate() {
 animate();
 
 window.addEventListener('keydown', function (event) {
-    if (event.key == 'a') {
+    if (event.key == 'a' || event.key == 'ArrowLeft') {
         playerState = 'walkleft';
         let currentX = parseFloat(canvas.style.transform.match(/(\d*\.)?\d+/g)[0]);
         if (currentX < 10) {
@@ -81,13 +81,13 @@ window.addEventListener('keydown', function (event) {
 });
 
 window.addEventListener('keyup', function (event) {
-    if (event.key == 'a') {
+    if (event.key == 'a' || event.key == 'ArrowLeft') {
         playerState = 'idleleft';
     }
 });
 
 window.addEventListener('keydown', function (event) {
-    if (event.key == 'd') {
+    if (event.key == 'd' || event.key == 'ArrowRight') {
         playerState = 'walkright';
         let currentX = parseFloat(canvas.style.transform.match(/(\d*\.)?\d+/g)[0]);
         if (currentX > 90) {
@@ -104,7 +104,7 @@ window.addEventListener('keydown', function (event) {
 });
 
 window.addEventListener('keyup', function (event) {
-    if (event.key == 'd') {
+    if (event.key == 'd' || event.key == 'ArrowRight') {
         playerState = 'idleright';
     }
 });
