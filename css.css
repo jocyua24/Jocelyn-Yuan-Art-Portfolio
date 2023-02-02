@@ -270,3 +270,37 @@ ul {
   height: 7em;
   z-index: 0;
 }
+
+.tip {
+  position: absolute;
+  width: 150px;
+  top: 80px;
+  right: 20px;
+  float: right;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: .03em;
+  color: #212121;
+  padding: 2px;
+}
+
+
+.rightarrow {
+  position: absolute;
+  width: 80px;
+  right: 10px;
+  bottom: 10px;
+  float: right;
+}
+
+.leftarrow {
+  position: absolute;
+  width: 80px;
+  left: 10px;
+  float: left;
+  bottom: 10px;
+}
