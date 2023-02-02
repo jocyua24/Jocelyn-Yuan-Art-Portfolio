@@ -13,7 +13,7 @@ if (!window.location.pathname.endsWith(".html")) {
     window.location.href = window.location.href + 'index.html';
 }
 
-const movementSpeed = 1;
+const movementSpeed = 0.5;
 
 let gameFrame = 0;
 const staggerFrames = 20;
@@ -65,7 +65,7 @@ animate();
 window.addEventListener('keydown', function (event) {
     if (event.key == 'a') {
         playerState = 'walkleft';
-        let currentX = parseFloat(canvas.style.transform.match(/[-+]?\d+/g)[0]);
+        let currentX = parseFloat(canvas.style.transform.match(/(\d*\.)?\d+/g)[0]);
         if (currentX < 10) {
             let currentPage = window.location.href.match(/[^\/]+$/)[0];
             let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
@@ -75,7 +75,7 @@ window.addEventListener('keydown', function (event) {
         }
         else {
 
-            canvas.style.transform = `translateX(${currentX - 1}vw)`;
+            canvas.style.transform = `translateX(${currentX - movementSpeed}vw)`;
         }
     }
 });
@@ -89,7 +89,7 @@ window.addEventListener('keyup', function (event) {
 window.addEventListener('keydown', function (event) {
     if (event.key == 'd') {
         playerState = 'walkright';
-        let currentX = parseFloat(canvas.style.transform.match(/[-+]?\d+/g)[0]);
+        let currentX = parseFloat(canvas.style.transform.match(/(\d*\.)?\d+/g)[0]);
         if (currentX > 90) {
             let currentPage = window.location.href.match(/[^\/]+$/)[0];
             let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
@@ -98,7 +98,7 @@ window.addEventListener('keydown', function (event) {
             }
         }
         else {
-            canvas.style.transform = `translateX(${currentX + 1}vw)`;
+            canvas.style.transform = `translateX(${currentX + movementSpeed}vw)`;
         }
     }
 });
