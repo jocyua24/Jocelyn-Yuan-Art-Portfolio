@@ -93,6 +93,7 @@ main small {
   justify-content: center;
   z-index: 1;
   -webkit-appearance: none;
+  appearance: none;
   border: 0;
   background: transparent;
   border-radius: 0;
@@ -307,6 +308,7 @@ ul {
 
 iframe {
   margin-left: auto;
-  margin-right:auto;
-  margin-top: 10em;
+  margin-right: auto;
+  padding-top: 10em;
+  display: block;
 }
