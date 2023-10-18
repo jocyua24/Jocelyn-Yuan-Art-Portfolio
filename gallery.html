@@ -1,178 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Jocelyn Yuan</title>
-    <link rel="stylesheet" type="text/css" href="css.css">
-    <link rel="stylesheet" type="text/css" href="modal.css">
-    
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Jocelyn Yuan</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <link rel="stylesheet" type="text/css" href="modal.css">
 </head>
+
 <body>
   <canvas id="canvas1" style="transform: translate(50vw);"></canvas>
   <script src="sprite.js"></script>
-    <div class="page">
-  <header tabindex="0">
-    <img class="logo" src="Images/logo.png" alt="logo">
-  </header>
-  <div id="nav-container">
-    <div class="bg"></div>
-    <div class="button" tabindex="0">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+  <div class="page">
+    <header tabindex="0">
+      <img class="logo" src="Images/logo.png" alt="logo">
+    </header>
+    <div id="nav-container">
+      <div class="bg"></div>
+      <div class="button" tabindex="0">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div id="nav-content" tabindex="0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div id="nav-content" tabindex="0">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="game.html">Game</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
 
-    <div class= "gallery">
+    <div class="gallery">
       <br>
       <br>
       <br>
       <br>
-       <!-- Childhood Companion -->
-        <img id="myImg" src="Images/ChildhoodCompanion.jpg" alt="Childhood Companion | 2019
+      <!-- Childhood Companion -->
+      <img id="myImg" src="Images/ChildhoodCompanion.jpg" alt="Childhood Companion | 2019
         Size: 12in x 12in
         Acrylic on Canvas" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- Decomposition -->
-        <img id="myImg2" src="Images/Decomposition.jpg" alt="Decomposition | 2022
+      <!-- Decomposition -->
+      <img id="myImg2" src="Images/Decomposition.jpg" alt="Decomposition | 2022
         Size: 24in x 18in
         Oil on Canvas" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- Self portrait during the pandemic era -->
-        <img id="myImg3" src="Images/Self-portrait during pandemic era.jpg" alt="Self Portrait During Pandemic Era | 2020
+      <!-- Self portrait during the pandemic era -->
+      <img id="myImg3" src="Images/Self-portrait during pandemic era.jpg" alt="Self Portrait During Pandemic Era | 2020
         Size: 8in x 12in
         Acrylic on Canvas" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- dads favorite plant -->
-        <img id="myImg4" src="Images/Dad's Favorite Plant.jpg" alt="Dad's Favorite Plant | 2020
+      <!-- dads favorite plant -->
+      <img id="myImg4" src="Images/Dad's Favorite Plant.jpg" alt="Dad's Favorite Plant | 2020
         Size: 8in x 12in
         Acrylic on Canvas" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- garlic -->
-        <img id="myImg5" src="Images/garlic.jpg" alt="Garlic | 2020
+      <!-- garlic -->
+      <img id="myImg5" src="Images/garlic.jpg" alt="Garlic | 2020
         Size: 18in x 24in
         Pencil" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- Lemons -->
-        <img id="myImg6" src="Images/Lemons.jpg" alt="Lemons | 2020
+      <!-- Lemons -->
+      <img id="myImg6" src="Images/Lemons.jpg" alt="Lemons | 2020
         Size: 18in x 24in
         Pencil, Colored Pencil" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- Lanterns -->
-        <img id="myImg7" src="Images/Lanterns.jpg" alt="Lanterns | 2020
+      <!-- Lanterns -->
+      <img id="myImg7" src="Images/Lanterns.jpg" alt="Lanterns | 2020
         Size: 12in x 12in
         Oil on Canvas" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- rat -->
-        <img id="myImg8" src="Images/rat.png" alt="Rat | 2022
+      <!-- rat -->
+      <img id="myImg8" src="Images/rat.png" alt="Rat | 2022
         Size: 24in x 30in
         Oil on Canvas" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- blossoms -->
-        <img id="myImg9" src="Images/Blossoms.jpg" alt="Blossoms | 2017
+      <!-- blossoms -->
+      <img id="myImg9" src="Images/Blossoms.jpg" alt="Blossoms | 2017
         Size: 16in x 42in
         Chinese Watercolor" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- eyes -->
-        <img id="myImg10" src="Images/eyes.jpg" alt="Eyes | 2021
+      <!-- eyes -->
+      <img id="myImg10" src="Images/eyes.jpg" alt="Eyes | 2021
         Size: 8in x 6in
         Pencil Sketch" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- king eider -->
-        <img id="myImg11" src="Images/king_eider.jpg" alt="King Eider | 2021
+      <!-- king eider -->
+      <img id="myImg11" src="Images/king_eider.jpg" alt="King Eider | 2021
         Size: 10in x 8in
         Acrylic" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- chained -->
-        <img id="myImg12" src="Images/chained.png" alt="Chained | 2019
+      <!-- chained -->
+      <img id="myImg12" src="Images/chained.png" alt="Chained | 2019
         Size: 10in x 8in
         Procreate" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <!-- fish -->
-        <img id="myImg13" src="Images/fish.jpg" alt="Garbaldi| 2023
+      <!-- fish -->
+      <img id="myImg13" src="Images/fish.jpg" alt="Garbaldi| 2023
         Size: 10in x 8in
         Oil Paint" style="height: 200px; width: auto">
-        <div id="myModal" class="modal">
-          <span class="close">&times;</span>
-          <img class="modal-content" id="img01">
-          <div id="caption"></div>
-        </div>
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
-        <script src="modal.js"></script>
+      <script src="modal.js"></script>
     </div>
-    <img class = "rightarrow" src="Images/rightarrow.png" alt="arrow">
-    <img class = "leftarrow" src="Images/leftarrow.png" alt="arrow">
-</div>
+    <img class="rightarrow" src="Images/rightarrow.png" alt="arrow">
+    <img class="leftarrow" src="Images/leftarrow.png" alt="arrow">
+  </div>
 </body>
+
 </html>

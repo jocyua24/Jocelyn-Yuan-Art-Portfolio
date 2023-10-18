@@ -66,7 +66,7 @@ window.addEventListener('keydown', function (event) {
     if (event.key == 'a' || event.key == 'ArrowLeft') {
         playerState = 'walkleft';
         let currentX = parseFloat(canvas.style.transform.match(/(\d*\.)?\d+/g)[0]);
-        if (currentX < 10) {
+        if (currentX < 3) {
             let currentPage = window.location.href.match(/[^\/]+$/)[0];
             let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
             if (index > 0) {
@@ -90,7 +90,7 @@ window.addEventListener('keydown', function (event) {
     if (event.key == 'd' || event.key == 'ArrowRight') {
         playerState = 'walkright';
         let currentX = parseFloat(canvas.style.transform.match(/(\d*\.)?\d+/g)[0]);
-        if (currentX > 90) {
+        if (currentX > 91) {
             let currentPage = window.location.href.match(/[^\/]+$/)[0];
             let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
             if (index < PAGES.length - 1) {
