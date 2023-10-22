@@ -1,22 +1,9 @@
-#myImg, #myImg2, #myImg3, #myImg4, #myImg5, #myImg6, #myImg7, #myImg8, #myImg9, #myImg10, #myImg11, #myImg12, #myImg13 {
+#gallery img {
   cursor: pointer;
   transition: 0.3s;
 }
 
-#myImg:hover {opacity: 0.7;}
-#myImg2:hover {opacity: 0.7;}
-#myImg3:hover {opacity: 0.7;}
-#myImg4:hover {opacity: 0.7;}
-#myImg5:hover {opacity: 0.7;}
-#myImg6:hover {opacity: 0.7;}
-#myImg7:hover {opacity: 0.7;}
-#myImg8:hover {opacity: 0.7;}
-#myImg9:hover {opacity: 0.7;}
-#myImg10:hover {opacity: 0.7;}
-#myImg11:hover {opacity: 0.7;}
-#myImg12:hover {opacity: 0.7;}
-#myImg13:hover {opacity: 0.7;}
-
+#gallery img:hover {opacity: 0.7;}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -72,7 +59,7 @@
 }
 
 /* The Close Button */
-.close {
+#close {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -82,8 +69,8 @@
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+#close:hover,
+#close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
