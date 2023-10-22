@@ -67,11 +67,7 @@ window.addEventListener('keydown', function (event) {
         playerState = 'walkleft';
         let currentX = parseFloat(canvas.style.transform.match(/(\d*\.)?\d+/g)[0]);
         if (currentX < 3) {
-            let currentPage = window.location.href.match(/[^\/]+$/)[0];
-            let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
-            if (index > 0) {
-                window.location.href = PAGES[index - 1] + '.html';
-            }
+            prevPage();
         }
         else {
 
@@ -90,12 +86,8 @@ window.addEventListener('keydown', function (event) {
     if (event.key == 'd' || event.key == 'ArrowRight') {
         playerState = 'walkright';
         let currentX = parseFloat(canvas.style.transform.match(/(\d*\.)?\d+/g)[0]);
-        if (currentX > 91) {
-            let currentPage = window.location.href.match(/[^\/]+$/)[0];
-            let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
-            if (index < PAGES.length - 1) {
-                window.location.href = PAGES[index + 1] + '.html';
-            }
+        if (currentX > 90) {
+            nextPage();
         }
         else {
             canvas.style.transform = `translateX(${currentX + movementSpeed}vw)`;
@@ -108,3 +100,34 @@ window.addEventListener('keyup', function (event) {
         playerState = 'idleright';
     }
 });
+
+function nextPage()
+{
+    let currentPage = window.location.href.match(/[^\/]+$/)[0];
+    let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
+    if (index < PAGES.length - 1) {
+        window.location.href = PAGES[index + 1] + '.html';
+    }
+}
+
+function prevPage()
+{
+    let currentPage = window.location.href.match(/[^\/]+$/)[0];
+    let index = PAGES.indexOf(currentPage.match(/[^\.]+/)[0]);
+    if (index > 0) {
+        window.location.href = PAGES[index - 1] + '.html';
+    }
+}
+
+window.onload = function () {
+    let left = document.getElementsByClassName('leftarrow')[0];
+    let right = document.getElementsByClassName('rightarrow')[0];
+    if(left)
+    {
+        left.addEventListener('click', prevPage);
+    }
+    if(right)
+    {
+        right.addEventListener('click', nextPage);
+    }
+};
